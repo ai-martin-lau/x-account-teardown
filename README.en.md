@@ -18,7 +18,7 @@ Not just another tweet scraper. It answers a far more valuable question:
 
 It lays out an account's entire tweet history along the timeline and reverse-engineers its growth arc: **dormancy → inflection point → content pillars → posting cadence → reply strategy → viral-hook formulas → growth curve**, then ships a ready-to-deliver, copy-the-homework report.
 
-See the sample report at [`assets/sample-gengdaJ/REPORT.md`](assets/sample-gengdaJ/REPORT.md) — a law student who hit 20K followers in 14 months. The teardown reveals: 10 months dormant before going all-in, an all-AI-tooling content focus, **5× more replies than originals** (cold-started by camping in big accounts' reply sections), and the hook formulas behind the top posts.
+See the sample report at [`assets/sample-gengdaJ/REPORT.md`](assets/sample-gengdaJ/REPORT.md) — Yichen (@gengdaJ), a law student who hit 20K followers in 14 months. The teardown reveals: 10 months dormant before going all-in, an all-AI-tooling content focus, **5× more replies than originals** (cold-started by camping in big accounts' reply sections), and the hook formulas behind the top posts.
 
 ## ✨ Why it's different
 
