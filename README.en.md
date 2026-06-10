@@ -18,7 +18,7 @@ Not just another tweet scraper. It answers a far more valuable question:
 
 It lays out an account's entire tweet history along the timeline and reverse-engineers its growth arc: **dormancy → inflection point → content pillars → posting cadence → reply strategy → viral-hook formulas → growth curve**, then ships a ready-to-deliver, copy-the-homework report.
 
-See the sample report at [`assets/sample-gengdaJ/REPORT.md`](assets/sample-gengdaJ/REPORT.md) — Yichen (@gengdaJ), a law student who hit 20K followers in 14 months. The teardown reveals: 10 months dormant before going all-in, an all-AI-tooling content focus, **5× more replies than originals** (cold-started by camping in big accounts' reply sections), and the hook formulas behind the top posts.
+See the sample report at [`assets/sample/REPORT.md`](assets/sample/REPORT.md) — a real AI-niche creator, a law student who hit 20K followers in 14 months. The teardown reveals: 10 months dormant before going all-in, an all-AI-tooling content focus, **5× more replies than originals** (cold-started by camping in big accounts' reply sections), and the hook formulas behind the top posts.
 
 ## ✨ Why it's different
 
@@ -34,7 +34,7 @@ See the sample report at [`assets/sample-gengdaJ/REPORT.md`](assets/sample-gengd
 This is a [Claude Code](https://claude.com/claude-code) Skill. Just tell Claude:
 
 ```
-Analyze how @gengdaJ grew its account
+Analyze how @naval grew its account
 ```
 
 Claude runs the whole acquire → analyze → report pipeline and gives you a plain-language read.
@@ -49,9 +49,9 @@ python3.11 -m venv .venv && .venv/bin/pip install -r requirements.txt
 /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --remote-debugging-port=9222
 
 # 3. Pipeline
-.venv/bin/python scripts/acquire.py gengdaJ --out out/gengdaJ_export
-.venv/bin/python scripts/analyze.py out/gengdaJ_export
-.venv/bin/python scripts/report.py out/gengdaJ_export/analysis.json --out-dir out/gengdaJ_report
+.venv/bin/python scripts/acquire.py naval --out out/naval_export
+.venv/bin/python scripts/analyze.py out/naval_export
+.venv/bin/python scripts/report.py out/naval_export/analysis.json --out-dir out/naval_report
 ```
 
 No debug-port Chrome? Use `--cookies 'auth_token=...; ct0=...'` or set the `X_COOKIES` env var.

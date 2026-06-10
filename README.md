@@ -18,12 +18,12 @@
 
 把一个账号的全部推文按时间摊开,逆向出它的成长轨迹:**休眠期 → 起号拐点 → 内容支柱 → 发布节奏 → 回复打法 → 爆款钩子公式 → 增长曲线**,最后产出一份可直接交付、可抄作业的中文报告。
 
-## 📈 样例(分析逸尘 @gengdaJ,法学生 14 个月做到 2 万粉)
+## 📈 样例(一个真实 AI 赛道创作者,法学生 14 个月做到 2 万粉)
 
-![增长曲线](assets/sample-gengdaJ/growth.svg)
+![增长曲线](assets/sample/growth.svg)
 
 > 一眼看穿:2025 年全年休眠,**2026-01 突然起号**(单月 62 原创 + 420 回复),橙线(原创均赞)随后强劲爬升。
-> 完整报告见 [`assets/sample-gengdaJ/REPORT.md`](assets/sample-gengdaJ/REPORT.md)。
+> 完整报告见 [`assets/sample/REPORT.md`](assets/sample/REPORT.md)。
 
 报告里你会看到:
 - **起号时间线**:注册后休眠 10 个月才 all-in
@@ -46,7 +46,7 @@
 这是一个 [Claude Code](https://claude.com/claude-code) Skill。装好后直接对 Claude 说:
 
 ```
-分析一下 @gengdaJ 这个账号是怎么起号的
+分析一下 @naval 这个账号是怎么起号的
 ```
 
 Claude 会自动跑完「采集 → 分析 → 出报告」,并给你一段人话解读。
@@ -61,9 +61,9 @@ python3.11 -m venv .venv && .venv/bin/pip install -r requirements.txt
 /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --remote-debugging-port=9222
 
 # 3. 一条龙
-.venv/bin/python scripts/acquire.py gengdaJ --out out/gengdaJ_export
-.venv/bin/python scripts/analyze.py out/gengdaJ_export
-.venv/bin/python scripts/report.py out/gengdaJ_export/analysis.json --out-dir out/gengdaJ_report
+.venv/bin/python scripts/acquire.py naval --out out/naval_export
+.venv/bin/python scripts/analyze.py out/naval_export
+.venv/bin/python scripts/report.py out/naval_export/analysis.json --out-dir out/naval_report
 ```
 
 没有带调试端口的 Chrome?也可以 `--cookies 'auth_token=...; ct0=...'` 或设环境变量 `X_COOKIES`。
