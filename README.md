@@ -1,5 +1,7 @@
 <div align="center">
 
+<img src="assets/cover.png" alt="x-account-teardown" width="820">
+
 # 🔬 x-account-teardown
 
 **对任意 X(Twitter)账号做「数据级起号解剖」**
@@ -18,7 +20,7 @@
 
 把一个账号的全部推文按时间摊开,逆向出它的成长轨迹:**休眠期 → 起号拐点 → 内容支柱 → 发布节奏 → 回复打法 → 爆款钩子公式 → 增长曲线**,最后产出一份可直接交付、可抄作业的中文报告。
 
-## 📈 样例(一个真实 AI 赛道创作者,法学生 14 个月做到 2 万粉)
+## 📈 样例(一个真实 AI 赛道创作者,14 个月做到 2 万粉)
 
 ![增长曲线](assets/sample/growth.svg)
 

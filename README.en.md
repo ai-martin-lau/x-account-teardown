@@ -1,5 +1,7 @@
 <div align="center">
 
+<img src="assets/cover.png" alt="x-account-teardown" width="820">
+
 # 🔬 x-account-teardown
 
 **A data-level "growth autopsy" for any X (Twitter) account**
@@ -18,7 +20,7 @@ Not just another tweet scraper. It answers a far more valuable question:
 
 It lays out an account's entire tweet history along the timeline and reverse-engineers its growth arc: **dormancy → inflection point → content pillars → posting cadence → reply strategy → viral-hook formulas → growth curve**, then ships a ready-to-deliver, copy-the-homework report.
 
-See the sample report at [`assets/sample/REPORT.md`](assets/sample/REPORT.md) — a real AI-niche creator, a law student who hit 20K followers in 14 months. The teardown reveals: 10 months dormant before going all-in, an all-AI-tooling content focus, **5× more replies than originals** (cold-started by camping in big accounts' reply sections), and the hook formulas behind the top posts.
+See the sample report at [`assets/sample/REPORT.md`](assets/sample/REPORT.md) — a real AI-niche creator who hit 20K followers in 14 months. The teardown reveals: 10 months dormant before going all-in, an all-AI-tooling content focus, **5× more replies than originals** (cold-started by camping in big accounts' reply sections), and the hook formulas behind the top posts.
 
 ## ✨ Why it's different
 
