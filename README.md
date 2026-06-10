@@ -8,7 +8,7 @@
 
 输入一个 `@handle` → 导出全部推文 → 还原它从 0 到大V 的完整起号过程
 
-简体中文 · [English](README.en.md)
+<a href="README.md">简体中文</a> · <a href="README_EN.md">English</a> · <a href="README_JA.md">日本語</a> · <a href="README_KO.md">한국어</a> · <a href="README_ES.md">Español</a>
 
 </div>
 
@@ -90,6 +90,10 @@ report.py    出报告:Markdown 解剖报告 + 纯 Python 生成的增长曲线 
 - 国内需挂代理才能连 x.com(脚本自动复用系统代理 / 探测本地 7890)。
 - **⚠️ 用专门的「采集小号」登录,别用主号**:工具是拿你登录账号的身份去调 X 内部接口的,风控风险落在这个号上。高频猛刷才危险,偶尔抓几千条基本无碍。
 - 仅供学习研究,请勿对同一账号高频反复采集。
+
+## ⭐ Star 趋势
+
+[![Star History Chart](https://api.star-history.com/svg?repos=ai-martin-lau/x-account-teardown&type=Date)](https://star-history.com/#ai-martin-lau/x-account-teardown&Date)
 
 ## 📄 License
 
