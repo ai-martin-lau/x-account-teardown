@@ -2,10 +2,6 @@
   <a href="README.md">English</a> · <a href="README_ZH.md">简体中文</a> · <a href="README_JA.md">日本語</a> · <a href="README_KO.md">한국어</a> · <a href="README_ES.md">Español</a>
 </p>
 
-<p align="center">
-  <img src="assets/cover.png" alt="X Account Teardown" width="100%">
-</p>
-
 <div align="center">
 
 # 🔬 x-account-teardown
