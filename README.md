@@ -1,97 +1,98 @@
-<div align="center">
+<p align="center">
+  <a href="README.md">English</a> · <a href="README_ZH.md">简体中文</a> · <a href="README_JA.md">日本語</a> · <a href="README_KO.md">한국어</a> · <a href="README_ES.md">Español</a>
+</p>
 
-<img src="assets/cover.png" alt="x-account-teardown" width="820">
+<p align="center">
+  <img src="assets/cover.png" alt="X Account Teardown" width="100%">
+</p>
+
+<div align="center">
 
 # 🔬 x-account-teardown
 
-**对任意 X(Twitter)账号做「数据级起号解剖」**
+**A data-level "growth autopsy" for any X (Twitter) account**
 
-输入一个 `@handle` → 导出全部推文 → 还原它从 0 到大V 的完整起号过程
-
-<a href="README.md">简体中文</a> · <a href="README_EN.md">English</a> · <a href="README_JA.md">日本語</a> · <a href="README_KO.md">한국어</a> · <a href="README_ES.md">Español</a>
+Give it a `@handle` → export every tweet → reconstruct exactly how the account grew from zero
 
 </div>
 
 ---
 
-不是又一个「导出推文」的爬虫。它回答一个更值钱的问题:
+Not just another tweet scraper. It answers a far more valuable question:
 
-> **这个大V,到底是怎么从 0 起号的?内容、节奏、打法是什么?我能怎么抄?**
+> **How did this big account actually grow from zero? What were its content, cadence, and tactics — and how do I copy them?**
 
-把一个账号的全部推文按时间摊开,逆向出它的成长轨迹:**休眠期 → 起号拐点 → 内容支柱 → 发布节奏 → 回复打法 → 爆款钩子公式 → 增长曲线**,最后产出一份可直接交付、可抄作业的中文报告。
+It lays out an account's entire tweet history along the timeline and reverse-engineers its growth arc: **dormancy → inflection point → content pillars → posting cadence → reply strategy → viral-hook formulas → growth curve**, then ships a ready-to-deliver, copy-the-homework report.
 
-## 📈 样例(一个真实 AI 赛道创作者,14 个月做到 2 万粉)
+## 📈 Sample (a real AI-niche creator who hit 20K followers in 14 months)
 
-![增长曲线](assets/sample/growth.svg)
+See the full sample report at [`assets/sample/REPORT.md`](assets/sample/REPORT.md). At a glance: dormant through 2025, then a sudden launch in 2026-01 (62 originals + 420 replies in a single month), with average likes climbing steadily afterward.
 
-> 一眼看穿:2025 年全年休眠,**2026-01 突然起号**(单月 62 原创 + 420 回复),橙线(原创均赞)随后强劲爬升。
-> 完整报告见 [`assets/sample/REPORT.md`](assets/sample/REPORT.md)。
+The report shows you:
+- **Growth timeline** — dormant for 10 months after sign-up, then went all-in
+- **Content pillars** — `video / Claude / Codex / tools / models / learning` — a pure AI-tooling lane
+- **Reply strategy** — 5× more replies than originals, cold-started by camping in top accounts' reply sections (with a Top-20 list of targets)
+- **Viral-hook formulas** — among the top-60 posts, "first-person/firsthand" ×31, "step-by-step tutorial" and "free/freebie" hooks dominate
+- **Copy-this checklist** — 5 directly actionable takeaways
 
-报告里你会看到:
-- **起号时间线**:注册后休眠 10 个月才 all-in
-- **内容支柱**:`视频 / Claude / Codex / 工具 / 模型 / 学习` —— 纯 AI 工具流
-- **回复打法**:回复量是原创的 **5 倍**,靠蹲守头部账号评论区冷启动(附 Top20 蹲守对象)
-- **爆款钩子公式**:Top60 高赞帖里,「第一人称亲历」×31、「保姆级教程」「免费白嫖」最密集
-- **复刻清单**:5 条可直接执行的抄作业建议
+## ✨ Why it's different
 
-## ✨ 为什么不一样
-
-| | 普通爬虫 | x-account-teardown |
+| | Typical scraper | x-account-teardown |
 |---|---|---|
-| 登录态 | 让你去开发者工具手抄 token | **自动从你登录的 Chrome 抠 cookie**(连 httpOnly 都拿,零配置) |
-| 3200 上限 | 撞墙,拿不到早期帖 | **按月搜索开窗,绕过上限**,回溯到第一条 |
-| 产出 | 一堆 JSON | **起号解剖报告 + 增长曲线图 + 可抄作业清单** |
-| 洞察 | 无 | 自动检测起号拐点、增长斜率、钩子公式、蹲守对象 |
+| Auth | You hand-copy a token from DevTools | **Auto-pulls cookies from your logged-in Chrome** (httpOnly included, zero config) |
+| 3200 cap | Hits the wall, misses early tweets | **Date-windowed search bypasses the cap**, back to tweet #1 |
+| Output | A pile of JSON | **Growth-autopsy report + growth-curve chart + copy-this checklist** |
+| Insight | None | Auto-detects the inflection point, growth slope, hook formulas, reply targets |
 
-## 🚀 用法
+## 🚀 Usage
 
-这是一个 [Claude Code](https://claude.com/claude-code) Skill。装好后直接对 Claude 说:
+This is a [Claude Code](https://claude.com/claude-code) Skill. Just tell Claude:
 
 ```
-分析一下 @naval 这个账号是怎么起号的
+Analyze how @naval grew its account
 ```
 
-Claude 会自动跑完「采集 → 分析 → 出报告」,并给你一段人话解读。
+Claude runs the whole acquire → analyze → report pipeline and gives you a plain-language read.
 
-### 手动跑(也可独立使用)
+### Run it manually
 
 ```bash
-# 1. 装依赖(需 Python 3.10+)
+# 1. Install (Python 3.10+)
 python3.11 -m venv .venv && .venv/bin/pip install -r requirements.txt
 
-# 2. 用带调试端口的 Chrome 登录 x.com(用于自动抠登录态)
+# 2. Launch Chrome with a debug port, logged in to x.com (for auto cookie pull)
 /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --remote-debugging-port=9222
 
-# 3. 一条龙
+# 3. Pipeline
 .venv/bin/python scripts/acquire.py naval --out out/naval_export
 .venv/bin/python scripts/analyze.py out/naval_export
 .venv/bin/python scripts/report.py out/naval_export/analysis.json --out-dir out/naval_report
 ```
 
-没有带调试端口的 Chrome?也可以 `--cookies 'auth_token=...; ct0=...'` 或设环境变量 `X_COOKIES`。
+No debug-port Chrome? Use `--cookies 'auth_token=...; ct0=...'` or set the `X_COOKIES` env var.
 
-## 🧩 工作原理
+## 🧩 How it works
 
 ```
-acquire.py   采集:twscrape + 自动抠 cookie + 代理自适应 + 3200 绕过 + 作者过滤
+acquire.py   twscrape + auto cookie pull + proxy autodetect + 3200 bypass + author filter
    ↓ all_posts.json / profile.json
-analyze.py   解剖:起号拐点检测 / 月度增长 / 内容支柱(jieba) / 节奏 / 回复打法 / 钩子 / 爆款
+analyze.py   inflection detection / monthly growth / content pillars (jieba) / cadence / reply strategy / hooks / breakouts
    ↓ analysis.json
-report.py    出报告:Markdown 解剖报告 + 纯 Python 生成的增长曲线 SVG
+report.py    Markdown autopsy report + pure-Python growth-curve SVG
    ↓ REPORT.md / growth.svg
 ```
 
-技术细节、起号分析框架、各指标怎么解读,见 [`references/methodology.md`](references/methodology.md)。
+See [`references/methodology.md`](references/methodology.md) for the growth-analysis framework and technical details.
 
-## ⚠️ 说明
+## ⚠️ Notes
 
-- 数据来自 X 公开接口,只反映公开可见的推文与互动。粉丝曲线 X 不公开,本工具用「均赞/均浏览随时间变化」作增长代理。
-- 已删除 / 仅关注者可见的推文拿不到。
-- 国内需挂代理才能连 x.com(脚本自动复用系统代理 / 探测本地 7890)。
-- **⚠️ 用专门的「采集小号」登录,别用主号**:工具是拿你登录账号的身份去调 X 内部接口的,风控风险落在这个号上。高频猛刷才危险,偶尔抓几千条基本无碍。
-- 仅供学习研究,请勿对同一账号高频反复采集。
+- Data comes from X's public endpoints — public tweets and engagement only. Follower curves aren't public; this tool uses avg-likes/views over time as a growth proxy.
+- Deleted / followers-only tweets are not retrievable.
+- A proxy may be required to reach x.com in some regions (the script reuses your system proxy / probes local 7890).
+- **⚠️ Use a dedicated burner account, not your main one**: the tool acts with the identity of whatever account is logged into your Chrome, so any anti-abuse risk lands on that account. Only high-frequency mass scraping is risky; pulling a few thousand tweets occasionally is fine.
+- For research only. Don't repeatedly mass-scrape the same account.
 
-## ⭐ Star 趋势
+## ⭐ Star History
 
 [![Star History Chart](https://api.star-history.com/svg?repos=ai-martin-lau/x-account-teardown&type=Date)](https://star-history.com/#ai-martin-lau/x-account-teardown&Date)
 
